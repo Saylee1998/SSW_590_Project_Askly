@@ -7,6 +7,11 @@ A minimal Q&A forum platform built with modern DevSecOps practices, focusing on 
 * Parin Patel
 * Saylee Waje
 
+#### Course Information
+* Course: SSW 590 DevOps Principles and Practices
+* Instructor: Dr. Gregg Vesonder
+* Semester: Fall 2025
+
 #### 📋 Project Overview
 Modern knowledge-sharing platforms are often cluttered with unnecessary features that distract from learning. Askly addresses this by providing a minimal Q&A forum focused on simplicity, collaboration, and community engagement.
 
