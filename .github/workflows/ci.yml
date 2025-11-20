@@ -25,7 +25,7 @@ jobs:
           --health-retries=5
 
     env:
-      DATABASE_URL: postgres://user:password@localhost:5432/quzr?schema=public
+      DATABASE_URL: postgresql://user:password@localhost:5432/askly?schema=public
 
     steps:
       - name: Checkout repository
