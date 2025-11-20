@@ -1,0 +1,175 @@
+{
+  "users": [
+    {
+      "email": "alice@example.com",
+      "username": "alice",
+      "password": "password123",
+      "role": "USER"
+    },
+    {
+      "email": "bob@example.com",
+      "username": "bob",
+      "password": "password123",
+      "role": "USER"
+    },
+    {
+      "email": "charlie@example.com",
+      "username": "charlie",
+      "password": "password123",
+      "role": "USER"
+    },
+    {
+      "email": "david@example.com",
+      "username": "david",
+      "password": "password123",
+      "role": "USER"
+    },
+    {
+      "email": "eve@example.com",
+      "username": "eve",
+      "password": "password123",
+      "role": "USER"
+    },
+    {
+      "email": "admin@example.com",
+      "username": "admin",
+      "password": "admin123",
+      "role": "ADMIN"
+    }
+  ],
+
+  "tags": [
+    { "name": "javascript", "description": "Questions about JavaScript." },
+    { "name": "react", "description": "Questions about React." },
+    { "name": "backend", "description": "Server-side development and APIs." },
+    { "name": "nodejs", "description": "Node.js runtime topics." },
+    { "name": "database", "description": "SQL, NoSQL and data modeling." },
+    { "name": "css", "description": "Styling and layouts." }
+  ],
+
+  "questions": [
+    {
+      "title": "How do I center a div in CSS?",
+      "content": "I tried margin: 0 auto but it doesn't work inside a flex container.",
+      "authorEmail": "alice@example.com",
+      "tagNames": ["css", "react"]
+    },
+    {
+      "title": "Why is my async function returning undefined?",
+      "content": "I'm using async/await but still receiving undefined values.",
+      "authorEmail": "bob@example.com",
+      "tagNames": ["javascript", "nodejs"]
+    },
+    {
+      "title": "How to structure a Node.js MVC backend?",
+      "content": "Looking for folder structure best practices.",
+      "authorEmail": "charlie@example.com",
+      "tagNames": ["backend", "nodejs"]
+    },
+    {
+      "title": "How to reduce React re-renders?",
+      "content": "Even when state does not change, the component re-renders!",
+      "authorEmail": "david@example.com",
+      "tagNames": ["react"]
+    },
+    {
+      "title": "How to optimize SQL joins?",
+      "content": "Large tables with joins are slow. How to optimize?",
+      "authorEmail": "eve@example.com",
+      "tagNames": ["database"]
+    },
+    {
+      "title": "How to handle 500 errors in Express?",
+      "content": "My API crashes when throwing errors. What is the correct middleware?",
+      "authorEmail": "bob@example.com",
+      "tagNames": ["backend", "nodejs"]
+    },
+    {
+      "title": "Why is React useEffect running twice?",
+      "content": "In development mode, useEffect executes 2 times.",
+      "authorEmail": "alice@example.com",
+      "tagNames": ["react"]
+    },
+    {
+      "title": "Difference between SQL and NoSQL databases?",
+      "content": "Which one should I use for analytics-heavy applications?",
+      "authorEmail": "charlie@example.com",
+      "tagNames": ["database"]
+    }
+  ],
+
+  "answers": [
+    {
+      "content": "Use: display: flex; justify-content: center; align-items: center;",
+      "authorEmail": "bob@example.com",
+      "questionTitle": "How do I center a div in CSS?",
+      "isAccepted": true
+    },
+    {
+      "content": "Undefined happens when you forget to return inside async functions.",
+      "authorEmail": "alice@example.com",
+      "questionTitle": "Why is my async function returning undefined?",
+      "isAccepted": false
+    },
+    {
+      "content": "Split your controllers, routes, and services for clean MVC.",
+      "authorEmail": "eve@example.com",
+      "questionTitle": "How to structure a Node.js MVC backend?",
+      "isAccepted": true
+    },
+    {
+      "content": "Use React.memo and useCallback to prevent unnecessary re-renders.",
+      "authorEmail": "charlie@example.com",
+      "questionTitle": "How to reduce React re-renders?",
+      "isAccepted": false
+    },
+    {
+      "content": "Add proper indexing and avoid SELECT * for faster join results.",
+      "authorEmail": "david@example.com",
+      "questionTitle": "How to optimize SQL joins?",
+      "isAccepted": true
+    },
+    {
+      "content": "Use an error-handling middleware: app.use((err, req, res, next) => {...})",
+      "authorEmail": "admin@example.com",
+      "questionTitle": "How to handle 500 errors in Express?",
+      "isAccepted": false
+    },
+    {
+      "content": "React Strict Mode intentionally mounts components twice in dev.",
+      "authorEmail": "david@example.com",
+      "questionTitle": "Why is React useEffect running twice?",
+      "isAccepted": false
+    },
+    {
+      "content": "SQL is relational; NoSQL is flexible and schema-less.",
+      "authorEmail": "bob@example.com",
+      "questionTitle": "Difference between SQL and NoSQL databases?",
+      "isAccepted": false
+    },
+    {
+      "content": "Use RETURN inside async/await functions to resolve values.",
+      "authorEmail": "admin@example.com",
+      "questionTitle": "Why is my async function returning undefined?",
+      "isAccepted": false
+    },
+    {
+      "content": "Try EXPLAIN ANALYZE on your queries to find bottlenecks.",
+      "authorEmail": "alice@example.com",
+      "questionTitle": "How to optimize SQL joins?",
+      "isAccepted": false
+    },
+    {
+      "content": "Use middlewares before your route handlers to catch errors.",
+      "authorEmail": "charlie@example.com",
+      "questionTitle": "How to handle 500 errors in Express?",
+      "isAccepted": false
+    },
+    {
+      "content": "React StrictMode double invokes lifecycle methods in dev.",
+      "authorEmail": "eve@example.com",
+      "questionTitle": "Why is React useEffect running twice?",
+      "isAccepted": true
+    }
+  ]
+}
