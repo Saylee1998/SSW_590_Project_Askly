@@ -16,7 +16,6 @@ async function main() {
   const existingUsers = await prisma.user.count();
   if (existingUsers > 0) {
     console.log("Seed skipped: database not empty.");
-    return;
   }
 
   const users = new Map();
