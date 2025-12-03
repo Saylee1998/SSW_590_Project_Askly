@@ -1,0 +1,25 @@
+name: "Secret Scan – Gitleaks"
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches:
+      - "**"
+
+jobs:
+  gitleaks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Important so Gitleaks can scan full history on PRs
+          fetch-depth: 0
+
+      - name: Run Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        with:
+          # Fail the job if secrets are found
+          fail: "true"
