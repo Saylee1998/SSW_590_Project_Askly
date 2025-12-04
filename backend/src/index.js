@@ -44,6 +44,14 @@ app.get("/", (req, res) => {
   res.send("Askly Backend is running!");
 });
 
-app.listen(PORT, "0.0.0.0",() => {
-  console.log(`Server is listening on port ${PORT}`);
-});
+// app.listen(PORT, "0.0.0.0",() => {
+//   console.log(`Server is listening on port ${PORT}`);
+// });
+
+if (process.env.NODE_ENV !== "test") {
+  app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server is listening on port ${PORT}`);
+  });
+}
+
+export default app;
