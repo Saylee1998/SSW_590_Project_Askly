@@ -1,9 +1,11 @@
 name: Run Backend Tests
 
 on:
+  push:
+    branches: [ "main" ]         
   pull_request:
     branches:
-      - "**"
+
 
 jobs:
   backend-tests:
@@ -19,7 +21,7 @@ jobs:
         ports:
           - 5432:5432
         options: >-
-          --health-cmd="pg_isready -U user -d quzr"
+          --health-cmd="pg_isready -U user -d askly"
           --health-interval=5s
           --health-timeout=5s
           --health-retries=5
@@ -35,9 +37,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache-dependency-path: "backend/package-lock.json"
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install backend dependencies
+        working-directory: "backend"
+        run: npm ci
 
       - name: Generate Prisma client
         working-directory: backend
@@ -47,6 +51,6 @@ jobs:
         working-directory: backend
         run: npx prisma migrate deploy
 
-      - name: Run backend tests
+      - name: Run backend tests with coverage
         working-directory: backend
         run: npm run test:ci
