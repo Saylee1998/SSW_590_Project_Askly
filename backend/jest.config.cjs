@@ -4,5 +4,9 @@ module.exports = {
     roots: ["<rootDir>/tests"],
     // we’re using plain JS + ESM, no Babel
     transform: {},
+
+    collectCoverage:true,
+    coverageDirectory:"coverage",
+    coverageReporters:["html","text-summary"],
   };
   

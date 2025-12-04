@@ -1,0 +1,2 @@
+# Ignore jws high-severity vuln (transitive via jsonwebtoken)
+CVE-2025-65945
