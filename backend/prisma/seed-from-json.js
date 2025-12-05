@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
-import { PrismaClient, Role, VoteType } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -9,14 +9,18 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 async function main() {
+  const existingUsers = await prisma.user.count();
+
+  if (existingUsers > 0) {
+    console.log("Seed skipped: database not empty.");
+    process.exit(0);  
+  }
+
+  console.log("Seeding database...");
+
   const filePath = path.join(__dirname, "..", "data", "seed-data.json");
   const raw = await fs.readFile(filePath, "utf-8");
   const data = JSON.parse(raw);
-
-  const existingUsers = await prisma.user.count();
-  if (existingUsers > 0) {
-    console.log("Seed skipped: database not empty.");
-  }
 
   const users = new Map();
   const tags = new Map();
@@ -76,9 +80,7 @@ async function main() {
       }
     });
 
-    console.log(
-      `Answer on "${a.questionTitle}" by ${a.authorEmail}`
-    );
+    console.log(`Answer on "${a.questionTitle}" by ${a.authorEmail}`);
   }
 
   console.log("Seed completed!");
