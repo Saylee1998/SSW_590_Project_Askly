@@ -80,8 +80,8 @@ This exploration helped the team understand trade-offs and choose appropriate to
 4. Design a secure, observable, and automated workflow from code to deployment
 5. Document a full DevSecOps pipeline demonstrating CI, security, and monitoring
 
-#### 📦 Deployment (Railway)
-Askly is deployed using Railway, chosen for its simplicity and fast provisioning. Both the backend and frontend were deployed as separate services, each connecting to a managed PostgreSQL instance.
+#### 📦 Deployment
+Askly is deployed using Render, a cloud platform that provides simple, scalable hosting for full-stack applications.
 
 **Deployment highlights:**
 * Automated build & deploy from GitHub
