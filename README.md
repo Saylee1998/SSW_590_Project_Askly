@@ -83,11 +83,6 @@ This exploration helped the team understand trade-offs and choose appropriate to
 #### 📦 Deployment
 Askly is deployed using Render, a cloud platform that provides simple, scalable hosting for full-stack applications.
 
-**Deployment highlights:**
-* Automated build & deploy from GitHub
-* Environment variables securely stored
-* No local setup required for end-users
-
 #### 📈 Monitoring
 * Prometheus scrapes metrics from backend
 * Grafana visualizes: API request throughput, Error rates, CPU & memory patterns, Database performance
