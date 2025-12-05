@@ -1,7 +1,7 @@
 {
   "name": "askly-backend",
   "version": "1.0.0",
-  "description": "Quzr Backend API (JavaScript)",
+  "description": "Askly Backend API (JavaScript)",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
